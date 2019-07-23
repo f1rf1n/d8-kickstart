@@ -1,0 +1,14 @@
+uuid: 0aa696a9-f1ae-467e-bd28-89b4e1c01954
+name: Mediacentrum
+mail: marck@wickedfruit.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /user/login
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
