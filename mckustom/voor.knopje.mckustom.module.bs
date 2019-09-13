@@ -1,0 +1,95 @@
+<?php
+/**
+ * @file
+ * Module file for mckustom.
+ */
+
+/**
+ * @defgroup mckustom Marck's Custom
+ * @ingroup custom
+ * @{
+ * Various hooks andsoforth for postaap website
+
+
+/**
+ * Simply returns a little bit of information about which hooks are implemented.
+ */
+function _mckustom_information() {
+  return t(
+    "Some implementations of hooks for Postaap. Currently :<br>
+     - hiding 'gekoppeld linky' field in node form<br>
+     - showing shortul on node view<br>"
+  );
+}
+
+/**
+ * Alters the node add persbericht form
+ */
+function mckustom_form_persbericht_node_form_alter(&$form, $form_state, $form_id) {
+  $form['field_gekoppeld_linky']['#access'] = FALSE;
+}
+
+/**
+ * Add submit function on mcc create form
+ */
+function mckustom_form_mcc_create_form_alter(&$form, $form_state, $form_id) {
+  $form['#submit'][] = 'mckustom_after_mcc_submit';
+}
+
+
+/**
+ * Do stuff on mcc create submit
+ */
+function mckustom_after_mcc_submit($form, &$form_state)  {
+  $nu = date_format_date(date_now(), 'custom', 'U');
+  $nid = $form_state['build_info']['args'][0]->nid;
+  $vid = $form_state['build_info']['args'][0]->vid;
+  $node = node_load($nid,$vid);
+  $sched = $form_state['values']['mcc']['schedule_time'];
+  // Create a dateobject from the schedule date and convert it to unix timestamp
+  $schedule_date = new DateObject($sched);
+  $sched = date_format_date($schedule_date, 'custom', 'U');
+  // Plan schedule if scheduled date is later then now. You can't plan in the past.
+  if ( $sched > $nu ) {
+    rules_invoke_component('rules_publicatie_inplannen',$node,$sched);
+  }
+  else {
+    drupal_set_message( t('Scheduled time is earlier then now or unchanged from default. No automatic publishing will occur. If you are sending a mailchimp campaign, please double check that the press release is published.'));    
+  }
+}
+
+/**
+ * Alters the node view for a persbericht
+ */
+function mckustom_node_view($node, $view_mode, $langcode) {
+  if ($view_mode == 'full' && $node->type == 'persbericht') {
+#    $field = $node->field_gekoppeld_linky['und'][0]['target_id'];
+    $field = $node->nid;
+    $shorturl = url('pb'.$field, array('absolute' => TRUE));
+    
+    $node->content['mckustom_shorturl'] = array(
+      '#type' => 'item',
+      '#title' => t('Short URL: '),
+      '#markup' => $shorturl,
+      '#value' => $shorturl,
+    );
+  }
+}
+
+/**
+ * Implements hook_field_extra_fields().
+ */
+function mckustom_field_extra_fields() {
+  $extra['node']['persbericht']['display'] = array(
+    'mckustom_shorturl' => array(
+      'label' => t('Custom ShortURL'),
+      'description' => t('Displays the URL of the linked linky'),
+      'weight' => 10,
+    ), 
+  );
+  return $extra;
+}
+
+/**
+ * @} End of "defgroup mckustom".
+ */

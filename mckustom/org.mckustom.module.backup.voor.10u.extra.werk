@@ -1,0 +1,66 @@
+<?php
+/**
+ * @file
+ * Module file for mckustom.
+ */
+
+/**
+ * @defgroup mckustom Marck's Custom
+ * @ingroup custom
+ * @{
+ * Various hooks andsoforth for postaap website
+
+
+/**
+ * Simply returns a little bit of information about which hooks are implemented.
+ */
+function _mckustom_information() {
+  return t(
+    "Some implementations of hooks for Postaap. Currently :<br>
+     - hiding 'gekoppeld linky' field in node form<br>
+     - showing shortul on node view<br>"
+  );
+}
+
+/**
+ * Alters the node add persbericht form
+ */
+function mckustom_form_persbericht_node_form_alter(&$form, $form_state, $form_id) {
+  $form['field_gekoppeld_linky']['#access'] = FALSE;
+}
+
+/**
+ * Alters the node add persbericht form
+ */
+function mckustom_node_view($node, $view_mode, $langcode) {
+  if ($view_mode == 'full' && $node->type == 'persbericht') {
+    $field = $node -> nid;
+#    $field = $node->field_gekoppeld_linky['und'][0]['target_id'];
+    $shorturl = url('pb'.$field, array('absolute' => TRUE));
+    
+    $node->content['mckustom_shorturl'] = array(
+      '#type' => 'item',
+      '#title' => t('Short URL: '),
+      '#markup' => $shorturl,
+      '#value' => $shorturl,
+    );
+  }
+}
+
+/**
+ * Implements hook_field_extra_fields().
+ */
+function mckustom_field_extra_fields() {
+  $extra['node']['persbericht']['display'] = array(
+    'mckustom_shorturl' => array(
+      'label' => t('Custom ShortURL'),
+      'description' => t('Displays the URL of the linked linky'),
+      'weight' => 10,
+    ), 
+  );
+  return $extra;
+}
+
+/**
+ * @} End of "defgroup mckustom".
+ */

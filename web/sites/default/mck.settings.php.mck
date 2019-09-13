@@ -1,7 +1,5 @@
 <?php
 
-// @codingStandardsIgnoreFile
-
 /**
  * @file
  * Drupal site-specific configuration file.
@@ -297,7 +295,7 @@ $config_directories = [];
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = '';
+$settings['hash_salt'] = 'jpSiTP9iKeK7F-JHryFtgB6xt8-MNSr_C4to4_9ZZYoO70oGI907Nv9gaZurWzPO0yPT-Sf6-g';
 
 /**
  * Deployment identifier.
@@ -381,35 +379,28 @@ $settings['update_free_access'] = FALSE;
 # $settings['reverse_proxy_addresses'] = ['a.b.c.d', ...];
 
 /**
- * Reverse proxy trusted headers.
- *
- * Sets which headers to trust from your reverse proxy.
- *
- * Common values are:
- * - \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_ALL
- * - \Symfony\Component\HttpFoundation\Request::HEADER_FORWARDED
- *
- * Note the default value of
- * @code
- * \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_ALL | \Symfony\Component\HttpFoundation\Request::HEADER_FORWARDED
- * @endcode
- * is not secure by default. The value should be set to only the specific
- * headers the reverse proxy uses. For example:
- * @code
- * \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_ALL
- * @endcode
- * This would trust the following headers:
- * - X_FORWARDED_FOR
- * - X_FORWARDED_HOST
- * - X_FORWARDED_PROTO
- * - X_FORWARDED_PORT
- *
- * @see \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_ALL
- * @see \Symfony\Component\HttpFoundation\Request::HEADER_FORWARDED
- * @see \Symfony\Component\HttpFoundation\Request::setTrustedProxies
+ * Set this value if your proxy server sends the client protocol in a header
+ * other than X-Forwarded-Proto.
  */
-# $settings['reverse_proxy_trusted_headers'] = \Symfony\Component\HttpFoundation\Request::HEADER_X_FORWARDED_ALL | \Symfony\Component\HttpFoundation\Request::HEADER_FORWARDED;
+# $settings['reverse_proxy_proto_header'] = 'X_FORWARDED_PROTO';
 
+/**
+ * Set this value if your proxy server sends the client protocol in a header
+ * other than X-Forwarded-Host.
+ */
+# $settings['reverse_proxy_host_header'] = 'X_FORWARDED_HOST';
+
+/**
+ * Set this value if your proxy server sends the client protocol in a header
+ * other than X-Forwarded-Port.
+ */
+# $settings['reverse_proxy_port_header'] = 'X_FORWARDED_PORT';
+
+/**
+ * Set this value if your proxy server sends the client protocol in a header
+ * other than Forwarded.
+ */
+# $settings['reverse_proxy_forwarded_header'] = 'FORWARDED';
 
 /**
  * Page caching:
@@ -551,7 +542,7 @@ if ($settings['hash_salt']) {
  * See https://www.drupal.org/documentation/modules/file for more information
  * about securing private files.
  */
-# $settings['file_private_path'] = '';
+$settings['file_private_path'] = '/domains/wickedfruit.com/mc2/private';
 
 /**
  * Session write interval:
@@ -722,9 +713,9 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
  *
  * For example:
  * @code
- * $settings['trusted_host_patterns'] = [
+ * $settings['trusted_host_patterns'] = array(
  *   '^www\.example\.com$',
- * ];
+ * );
  * @endcode
  * will allow the site to only run from www.example.com.
  */
@@ -748,12 +739,12 @@ $settings['trusted_host_patterns'] = array(
  *
  * For example:
  * @code
- * $settings['trusted_host_patterns'] = [
+ * $settings['trusted_host_patterns'] = array(
  *   '^example\.com$',
  *   '^.+\.example\.com$',
  *   '^example\.org$',
  *   '^.+\.example\.org$',
- * ];
+ * );
  * @endcode
  * will allow the site to run off of all variants of example.com and
  * example.org, with all subdomains included.
@@ -793,6 +784,28 @@ $settings['entity_update_batch_size'] = 50;
  */
 $settings['entity_update_backup'] = TRUE;
 
+/*
+$config_directories['sync'] = '../config/sync';
+$databases['default']['default'] = [
+    'host' => getenv('DB_HOST'),
+    'database' => getenv('DB_NAME'),
+    'username' => getenv('DB_USER'),
+    'password' => getenv('DB_PASSWORD'),
+    'driver' => getenv('DB_DRIVER'),
+];*/
+
+///domains/dekorenmaten.nl/DEFAULT/config/sync
+// org_mck $config_directories['sync'] = '/var/www/html/config/sync';
+$config_directories['sync'] = '../config/sync';
+global $content_directories;
+$content_directories['sync'] = '../content/sync';
+
+$settings['install_profile'] = 'minimal';
+
+// This enables the config_split module dev environment
+$config['config_split.config_split.dev']['status'] = TRUE;
+
+ini_set('memory_limit', '512M');
 /**
  * Load local development override configuration, if available.
  *
@@ -807,3 +820,6 @@ $settings['entity_update_backup'] = TRUE;
 # if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
+if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
+  include $app_root . '/' . $site_path . '/settings.local.php';
+}
