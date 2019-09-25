@@ -1,0 +1,38 @@
+uuid: 75e6e257-33d9-428f-b733-bec17f15a99d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.linky.body
+    - field.field.node.linky.field_gekoppeld_pb
+    - field.field.node.linky.field_url_out
+    - field.field.node.linky.field_urlout
+    - field.field.node.linky.field_urlpb
+    - node.type.linky
+  module:
+    - text
+    - user
+id: node.linky.teaser
+targetEntityType: node
+bundle: linky
+mode: teaser
+content:
+  body:
+    label: hidden
+    weight: 0
+    type: text_summary_or_trimmed
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_gekoppeld_pb: true
+  field_url_out: true
+  field_urlout: true
+  field_urlpb: true

@@ -1,0 +1,22 @@
+uuid: 2fe9b0f1-bf46-4eb2-8ae4-5f18b8de5391
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - mediacentre
+_core:
+  default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
+id: mediacentre_system_powered_by
+theme: mediacentre
+region: footer_bottom
+weight: -9
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: ''
+  provider: system
+  label_display: '0'
+visibility: {  }

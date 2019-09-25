@@ -1,0 +1,18 @@
+uuid: 665ad67d-aa57-4230-8144-1eb7f287b017
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.linky
+id: node.linky.title
+field_name: title
+entity_type: node
+bundle: linky
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

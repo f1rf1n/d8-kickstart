@@ -1,0 +1,65 @@
+uuid: a94d1ab2-3ce6-4c7d-927f-a84b47ec741f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.mcc
+    - field.field.node.persbericht.body
+    - field.field.node.persbericht.field_bijlagen
+    - field.field.node.persbericht.field_contact
+    - field.field.node.persbericht.field_gekoppeld_linky
+    - field.field.node.persbericht.field_socials
+    - field.field.node.persbericht.field_urlout
+    - node.type.persbericht
+  module:
+    - file
+    - link
+    - text
+    - user
+id: node.persbericht.mcc
+targetEntityType: node
+bundle: persbericht
+mode: mcc
+content:
+  body:
+    label: hidden
+    weight: 0
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_bijlagen:
+    label: above
+    weight: 3
+    type: file_default
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    region: content
+  field_socials:
+    label: hidden
+    weight: 1
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_urlout:
+    label: above
+    weight: 2
+    type: link
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_contact: true
+  field_gekoppeld_linky: true

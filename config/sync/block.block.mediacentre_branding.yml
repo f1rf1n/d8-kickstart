@@ -1,0 +1,25 @@
+uuid: b7ba4afc-24d9-40fa-82ae-f0137af2880e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - mediacentre
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: mediacentre_branding
+theme: mediacentre
+region: header_bottom
+weight: -8
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: false
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

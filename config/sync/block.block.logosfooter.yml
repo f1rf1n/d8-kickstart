@@ -1,0 +1,25 @@
+uuid: ad56a3c8-ae4a-4480-9692-899be0b9e1d8
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:8e8bdd8f-a162-4314-ae7d-0628d1818be6'
+  module:
+    - block_content
+  theme:
+    - mediacentre
+id: logosfooter
+theme: mediacentre
+region: footer_bottom
+weight: -10
+provider: null
+plugin: 'block_content:8e8bdd8f-a162-4314-ae7d-0628d1818be6'
+settings:
+  id: 'block_content:8e8bdd8f-a162-4314-ae7d-0628d1818be6'
+  label: 'Logo''s footer'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

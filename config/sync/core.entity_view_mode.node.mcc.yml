@@ -1,0 +1,10 @@
+uuid: a5c9aa0c-630d-4399-bf44-bdeed63926c7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.mcc
+label: mcc
+targetEntityType: node
+cache: true

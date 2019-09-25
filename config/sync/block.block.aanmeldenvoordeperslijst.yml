@@ -1,0 +1,25 @@
+uuid: bad4355c-413b-471e-8c60-0991e2cfeda1
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:a84c0493-819f-4791-abab-b6cd26b78102'
+  module:
+    - block_content
+  theme:
+    - mediacentre
+id: aanmeldenvoordeperslijst
+theme: mediacentre
+region: footer_top
+weight: 0
+provider: null
+plugin: 'block_content:a84c0493-819f-4791-abab-b6cd26b78102'
+settings:
+  id: 'block_content:a84c0493-819f-4791-abab-b6cd26b78102'
+  label: 'Aanmelden voor de perslijst'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

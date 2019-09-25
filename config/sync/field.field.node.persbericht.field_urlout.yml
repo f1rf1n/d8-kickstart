@@ -1,0 +1,23 @@
+uuid: c35752ff-6628-4fb9-bfd7-4da78b07a47b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_urlout
+    - node.type.persbericht
+  module:
+    - link
+id: node.persbericht.field_urlout
+field_name: field_urlout
+entity_type: node
+bundle: persbericht
+label: 'Webbericht op website GroenLinks Europa'
+description: "Hier kan je de titel en URL van de uiteindelijke versie van het persbericht invoeren. Bijvoorbeeld op de GroenLinks website.\r\nAls deze ingevuld wordt dan zal de short URL daarnaartoe linken."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

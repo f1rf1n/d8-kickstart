@@ -1,0 +1,23 @@
+uuid: dca151c8-66d7-40f9-a416-1c454c64957d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_urlout
+    - node.type.linky
+  module:
+    - link
+id: node.linky.field_urlout
+field_name: field_urlout
+entity_type: node
+bundle: linky
+label: 'URL Update'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

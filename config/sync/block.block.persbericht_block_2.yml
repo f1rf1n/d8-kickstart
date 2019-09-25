@@ -1,0 +1,30 @@
+uuid: cd2460da-9450-41cd-aef0-d17ae66d41ea
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:4753f8be-5ea7-4f38-a3c2-ba20eacbe1ed'
+  module:
+    - block_content
+    - system
+  theme:
+    - bartik
+id: persbericht_block_2
+theme: bartik
+region: content
+weight: -10
+provider: null
+plugin: 'block_content:4753f8be-5ea7-4f38-a3c2-ba20eacbe1ed'
+settings:
+  id: 'block_content:4753f8be-5ea7-4f38-a3c2-ba20eacbe1ed'
+  label: '<none>'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/search*\n/archive*"

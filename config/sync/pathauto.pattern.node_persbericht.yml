@@ -1,0 +1,21 @@
+uuid: 8e92da4b-2c94-4190-b95f-14c389c07693
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node_persbericht
+label: 'Content - Persbericht'
+type: 'canonical_entities:node'
+pattern: 'persbericht/[node:title]'
+selection_criteria:
+  -
+    id: node_type
+    bundles:
+      persbericht: persbericht
+    negate: false
+    context_mapping:
+      node: node
+selection_logic: and
+weight: 0
+relationships: {  }

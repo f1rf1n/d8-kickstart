@@ -1,0 +1,22 @@
+uuid: 839d97f7-abf1-4186-a614-96e99a4fd776
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - mediacentre
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: mediacentre_help
+theme: mediacentre
+region: footer_bottom
+weight: -1
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

@@ -1,11 +1,11 @@
 uuid: fe663978-9bc1-49c5-b3de-2861b6715234
 name: Mediacentrum
-mail: marck@wickedfruit.com
+mail: europa@groenlinks.nl
 slogan: ''
 page:
   403: ''
   404: ''
-  front: /node
+  front: /node/58
 admin_compact_mode: false
 weight_select_max: 100
 langcode: en

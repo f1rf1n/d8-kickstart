@@ -1,0 +1,22 @@
+uuid: e9343b22-cf2e-40eb-8e79-b67a6d1b6800
+langcode: en
+status: true
+dependencies:
+  theme:
+    - mediacentre
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: mediacentre_local_tasks
+theme: mediacentre
+region: content
+weight: -6
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

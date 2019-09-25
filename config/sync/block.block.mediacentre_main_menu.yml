@@ -1,0 +1,27 @@
+uuid: 394b4983-88df-44fb-aa9e-80083ffde8c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - mediacentre
+_core:
+  default_config_hash: ChCx7DYNUrPTt5uiRdQAPDKJQMc-_SyAQTrZh8H0o-c
+id: mediacentre_main_menu
+theme: mediacentre
+region: footer_bottom
+weight: -3
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

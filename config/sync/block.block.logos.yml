@@ -1,0 +1,25 @@
+uuid: 02a5d183-c468-4127-8392-daf3fd4fe3f2
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:bbb5c3fc-013e-4ac2-a728-c2bb7f2ec935'
+  module:
+    - block_content
+  theme:
+    - mediacentre
+id: logos
+theme: mediacentre
+region: header_bottom
+weight: -9
+provider: null
+plugin: 'block_content:bbb5c3fc-013e-4ac2-a728-c2bb7f2ec935'
+settings:
+  id: 'block_content:bbb5c3fc-013e-4ac2-a728-c2bb7f2ec935'
+  label: 'Logo''s'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

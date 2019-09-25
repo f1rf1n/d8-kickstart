@@ -1,0 +1,27 @@
+uuid: 9b00a777-b4de-4888-abe1-42bb1311ffc2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bijlagen
+    - node.type.persbericht
+  module:
+    - file
+id: node.persbericht.field_bijlagen
+field_name: field_bijlagen
+entity_type: node
+bundle: persbericht
+label: Bijlagen
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: ''
+  file_extensions: 'txt jpg jpeg png pdf xls doc odt gif raw bmp docx xlsx ppt pptx'
+  max_filesize: '4 MB'
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

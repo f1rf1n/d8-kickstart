@@ -1,0 +1,22 @@
+uuid: 04c0b668-5236-4e9c-ae05-2a9d760b2c3c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.linky
+  module:
+    - text
+id: node.linky.body
+field_name: body
+entity_type: node
+bundle: linky
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

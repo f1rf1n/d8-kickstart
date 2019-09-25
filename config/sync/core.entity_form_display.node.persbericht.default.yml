@@ -1,0 +1,127 @@
+uuid: 3d37a400-c056-42a2-9c18-acf7a30acacf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.persbericht.body
+    - field.field.node.persbericht.field_bijlagen
+    - field.field.node.persbericht.field_contact
+    - field.field.node.persbericht.field_gekoppeld_linky
+    - field.field.node.persbericht.field_socials
+    - field.field.node.persbericht.field_urlout
+    - node.type.persbericht
+  module:
+    - file
+    - link
+    - path
+    - text
+id: node.persbericht.default
+targetEntityType: node
+bundle: persbericht
+mode: default
+content:
+  body:
+    weight: 3
+    type: text_textarea_with_summary
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_bijlagen:
+    weight: 5
+    type: file_generic
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    region: content
+  field_contact:
+    weight: 4
+    type: text_textarea
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_gekoppeld_linky:
+    weight: 7
+    type: entity_reference_autocomplete
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_socials:
+    weight: 8
+    type: text_textarea
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_urlout:
+    weight: 6
+    type: link_default
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    region: content
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 15
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 120
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 16
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

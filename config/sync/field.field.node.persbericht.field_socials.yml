@@ -1,0 +1,24 @@
+uuid: 7bb75c69-9839-4b5a-bd03-d0735cb3b833
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_socials
+    - node.type.persbericht
+  module:
+    - text
+id: node.persbericht.field_socials
+field_name: field_socials
+entity_type: node
+bundle: persbericht
+label: socials
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: "<p>Link Twitter</p>\r\n\r\n<p>Facebook link</p>\r\n"
+    format: full_html
+default_value_callback: ''
+settings: {  }
+field_type: text_long

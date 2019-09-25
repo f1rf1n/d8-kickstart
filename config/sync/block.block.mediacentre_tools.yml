@@ -1,0 +1,27 @@
+uuid: d369975c-c2f3-47c0-b096-880a0303bffd
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.tools
+  module:
+    - system
+  theme:
+    - mediacentre
+_core:
+  default_config_hash: rH6PpAn7-RScha1rGkohGAYSSh_1OVeZzioJPzPw6O4
+id: mediacentre_tools
+theme: mediacentre
+region: footer_bottom
+weight: -7
+provider: null
+plugin: 'system_menu_block:tools'
+settings:
+  id: 'system_menu_block:tools'
+  label: Tools
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

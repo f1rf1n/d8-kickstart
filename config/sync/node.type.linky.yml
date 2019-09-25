@@ -1,0 +1,16 @@
+uuid: 0936879f-7ec6-4419-aca9-84b39c0861c8
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    parent: 'main-menu:0:'
+name: linky
+type: linky
+description: "NHC Not for Human Consumption\r\nInterne CT die met behulp van Rules gesynchroniseert wordt en de URL forwarding regelt.\r\nDit is waar de short-url naartoe wijst."
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,22 @@
+uuid: 3eb9ae3a-0b60-4b73-a59b-b9bb494a7bb2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.persbericht
+  module:
+    - text
+id: node.persbericht.body
+field_name: body
+entity_type: node
+bundle: persbericht
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

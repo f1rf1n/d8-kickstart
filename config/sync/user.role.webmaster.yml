@@ -1,0 +1,40 @@
+uuid: 2fa32be1-ebde-4748-aa57-a902a1657ab1
+langcode: en
+status: true
+dependencies: {  }
+id: webmaster
+label: webmaster
+weight: 2
+is_admin: null
+permissions:
+  - 'access administration menu'
+  - 'access administration pages'
+  - 'access content'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access site in maintenance mode'
+  - 'access user profiles'
+  - 'administer blocks'
+  - 'administer fields'
+  - 'administer menu'
+  - 'administer nodes'
+  - 'administer search'
+  - 'administer users'
+  - 'change own username'
+  - 'create page content'
+  - 'create persbericht content'
+  - 'delete any page content'
+  - 'delete any persbericht content'
+  - 'delete own page content'
+  - 'delete own persbericht content'
+  - 'edit any page content'
+  - 'edit any persbericht content'
+  - 'edit own page content'
+  - 'edit own persbericht content'
+  - 'search content'
+  - 'translate interface'
+  - 'use advanced search'
+  - 'use text format filtered_html'
+  - 'use text format full_html'
+  - 'view own unpublished content'
+  - 'view the administration theme'

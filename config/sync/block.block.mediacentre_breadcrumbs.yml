@@ -1,0 +1,22 @@
+uuid: d92a46b7-2d3c-461e-b425-4728798592f7
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - mediacentre
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: mediacentre_breadcrumbs
+theme: mediacentre
+region: footer_bottom
+weight: -9
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

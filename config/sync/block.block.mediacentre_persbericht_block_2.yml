@@ -1,0 +1,30 @@
+uuid: 3ddb3244-058e-4c88-927e-79d180610615
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:4753f8be-5ea7-4f38-a3c2-ba20eacbe1ed'
+  module:
+    - block_content
+    - system
+  theme:
+    - mediacentre
+id: mediacentre_persbericht_block_2
+theme: mediacentre
+region: content
+weight: -8
+provider: null
+plugin: 'block_content:4753f8be-5ea7-4f38-a3c2-ba20eacbe1ed'
+settings:
+  id: 'block_content:4753f8be-5ea7-4f38-a3c2-ba20eacbe1ed'
+  label: '<none>'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/search*\n/archive*"

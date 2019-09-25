@@ -1,0 +1,13 @@
+global-styling:
+  version: 1.x
+  css:
+    theme:
+      css/reset.css: {}
+      css/base.css: {}
+      css/style.css: {}
+      css/sidr.css: {}
+  js:
+    js/theme.js: {}
+    js/jquery.sidr.min.js: {}
+  dependencies:
+    - core/jquery

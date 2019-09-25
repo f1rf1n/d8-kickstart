@@ -1,0 +1,19 @@
+uuid: 8305c503-76a2-447a-9729-451ea63e1581
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_socials
+field_name: field_socials
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

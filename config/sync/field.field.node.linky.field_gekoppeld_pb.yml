@@ -1,0 +1,30 @@
+uuid: e5eb6537-4ad1-42da-a019-8baeb93c99df
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_gekoppeld_pb
+    - node.type.linky
+    - node.type.persbericht
+id: node.linky.field_gekoppeld_pb
+field_name: field_gekoppeld_pb
+entity_type: node
+bundle: linky
+label: 'gekoppeld pb'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      persbericht: persbericht
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

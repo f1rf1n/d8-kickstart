@@ -1,0 +1,24 @@
+uuid: d139b70d-e1c2-4c9e-9d2e-c085262612ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact
+    - node.type.persbericht
+  module:
+    - text
+id: node.persbericht.field_contact
+field_name: field_contact
+entity_type: node
+bundle: persbericht
+label: 'Neem contact op met onze persvoorlichter'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: "<p>Neem voor meer info contact op met de persvoorlichter van GroenLinks Europa:</p>\r\n\r\n<p><strong>Nanda Troost</strong><br />\r\nTelefoon:<br />\r\n+31 627 015 080 (NL) of</p>\r\n\r\n<p>+32 228 38365<span>&nbsp;</span><span>(B)</span><br />\r\nE-mail: <a href=\"mailto:nanda.troost@europarl.europa.eu\">nanda.troost@europarl.europa.eu</a></p>\r\n\r\n<p>Extra persinformatie staat op <a href=\"http://mediacentrum.groenlinks.nl\" target=\"_blank\">de website van het Mediacentrum van GroenLinks Europa</a>.</p>\r\n"
+    format: filtered_html
+default_value_callback: ''
+settings: {  }
+field_type: text_long

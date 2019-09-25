@@ -1,0 +1,30 @@
+uuid: aae4e104-635e-48b6-9f01-cbe4a9dea2c4
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:acd69cd4-a909-4ed4-9a1a-edab43609cab'
+  module:
+    - block_content
+    - system
+  theme:
+    - bartik
+id: persbericht_block_1
+theme: bartik
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:acd69cd4-a909-4ed4-9a1a-edab43609cab'
+settings:
+  id: 'block_content:acd69cd4-a909-4ed4-9a1a-edab43609cab'
+  label: Persberichten
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '/node/*/*'

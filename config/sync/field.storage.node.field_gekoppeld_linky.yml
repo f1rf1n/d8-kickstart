@@ -1,0 +1,19 @@
+uuid: 70c6e3e6-0fe0-44ec-a244-516f0d20d62b
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_gekoppeld_linky
+field_name: field_gekoppeld_linky
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

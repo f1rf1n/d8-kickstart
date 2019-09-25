@@ -35,6 +35,7 @@
         "drupal/pathauto": "^1.4",
         "drupal/redirect": "^1.4",
         "drupal/token": "^1.5",
+        "drupal/views_bulk_edit": "^2.3",
         "drush/drush": "^9.0.0",
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",

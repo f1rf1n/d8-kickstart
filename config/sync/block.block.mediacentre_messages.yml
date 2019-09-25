@@ -1,0 +1,22 @@
+uuid: ef88dc30-e839-4fd8-a12e-898f11e0fce0
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - mediacentre
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: mediacentre_messages
+theme: mediacentre
+region: contenttop
+weight: -8
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: f836e4a9-dd7e-475a-b09f-33b452731a96
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - mediacentre
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: mediacentre_persbericht_system_main
+theme: mediacentre
+region: content
+weight: -5
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: ''
+  provider: system
+  label_display: '0'
+visibility: {  }
